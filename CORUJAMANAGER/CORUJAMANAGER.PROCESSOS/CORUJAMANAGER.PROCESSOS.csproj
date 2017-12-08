@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CORUJAMANAGER.ENTIDADESDENEGOCIO\CORUJAMANAGER.ENTIDADESDENEGOCIO.csproj" />
+    <ProjectReference Include="..\CORUJAMANAGER.MAPEADORES\CORUJAMANAGER.MAPEADORES.csproj" />
+  </ItemGroup>
+
+</Project>
