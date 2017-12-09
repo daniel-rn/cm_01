@@ -1,8 +1,7 @@
 ﻿namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
 {
-    public class Cidade : ObjetoComId
+    public class Cidade : ObjetoComId,ICidade
     {
-        public string Nome { get; set; }
         public IEstado Estado;
         public Cidade(string nome, IEstado estado)
         {

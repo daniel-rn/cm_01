@@ -1,6 +1,10 @@
-﻿namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
 {
-    public class Cargo : ObjetoComId
+    public class Escola : ObjetoComId
     {
         public override bool Equals(object obj)
         {

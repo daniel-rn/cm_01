@@ -2,7 +2,6 @@
 {
     public class Aluno : ObjetoComId
     {
-        public string Nome { get; set; }
         public string DataNascimento { get; set; }
         
         public override bool Equals(object obj)

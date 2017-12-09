@@ -1,7 +1,8 @@
 ﻿namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
 {
-    public class Cargo : ObjetoComId
+    public class Disciplina : ObjetoComId
     {
+
         public override bool Equals(object obj)
         {
             return base.Equals(obj);
@@ -14,7 +15,7 @@
 
         public override string ToString()
         {
-            return base.ToString();
+            return Nome;
         }
     }
 }
