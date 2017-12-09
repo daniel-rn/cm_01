@@ -1,13 +1,6 @@
-﻿using CORUJAMANAGER.PROCESSOS;
+﻿using CORUJAMANAGER.ENTIDADESDENEGOCIO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace CORUJAMANAGER
@@ -21,8 +14,10 @@ namespace CORUJAMANAGER
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            new ProcessoTeste();
-            new MapeadorTeste();
+            var estado = new Estado { Nome = "Goias" };
+            var cidade = new Cidade("Goiania", estado);
+
+            Debug.WriteLine($"Cidade: {cidade.Nome}, Estado: {cidade.Estado}");
         }
     }
 }

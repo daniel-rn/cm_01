@@ -79,6 +79,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CORUJAMANAGER.ENTIDADESDENEGOCIO\CORUJAMANAGER.ENTIDADESDENEGOCIO.csproj">
+      <Project>{1B8803E0-4514-4FD3-B89A-F6D021757EE8}</Project>
+      <Name>CORUJAMANAGER.ENTIDADESDENEGOCIO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CORUJAMANAGER.PROCESSOS\CORUJAMANAGER.PROCESSOS.csproj">
       <Project>{4F6A59A3-4FB0-4B0C-B1D2-5DFB5E3BEE0D}</Project>
       <Name>CORUJAMANAGER.PROCESSOS</Name>
