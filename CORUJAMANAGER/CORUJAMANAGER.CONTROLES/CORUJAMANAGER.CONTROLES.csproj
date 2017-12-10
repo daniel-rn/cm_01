@@ -45,7 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControleDePesquisas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleDePesquisas.Designer.cs">
+      <DependentUpon>ControleDePesquisas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControleDePesquisas.resx">
+      <DependentUpon>ControleDePesquisas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

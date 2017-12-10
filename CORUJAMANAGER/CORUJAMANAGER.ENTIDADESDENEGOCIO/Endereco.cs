@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
+﻿namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
 {
     public class Endereco : ObjetoComId
     {
