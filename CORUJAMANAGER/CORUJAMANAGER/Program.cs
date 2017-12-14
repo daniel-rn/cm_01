@@ -1,22 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 
-namespace CORUJAMANAGER
+namespace CORUJA
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (args.Length == 0)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmLoginForm());
+            }
+#if DEBUG
+            else
+            {
+                ExecuteAplicacao(args);
+            }
+#endif
+        }
+
+        private static void ExecuteAplicacao(IReadOnlyList<string> args)
+        {
+            var idFormulario = args[0];
+            var ass = Assembly.GetExecutingAssembly();
+
+            if (!(ass.CreateInstance($"CORUJA.{idFormulario}") is Form frm))
+            {
+                MessageBox.Show($@"Formulário não encontrado: {idFormulario}", @"Erro", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+            Application.Run(frm);
         }
     }
 }
