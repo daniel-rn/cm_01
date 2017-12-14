@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.9.0" />
+    <PackageReference Include="SpecFlow.NUnit" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CORUJAMANAGER.ENTIDADESDENEGOCIO\CORUJAMANAGER.ENTIDADESDENEGOCIO.csproj" />
     <ProjectReference Include="..\CORUJAMANAGER.MAPEADORES\CORUJAMANAGER.MAPEADORES.csproj" />
   </ItemGroup>
