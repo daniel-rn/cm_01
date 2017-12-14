@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Forms;
+using CORUJAMANAGER;
 
 namespace CORUJA
 {
@@ -17,7 +18,7 @@ namespace CORUJA
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmLoginForm());
+                Application.Run(new FormBase());
             }
 #if DEBUG
             else
