@@ -18,7 +18,7 @@ namespace CORUJA
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormBase());
+                Application.Run(new FormLogin());
             }
 #if DEBUG
             else

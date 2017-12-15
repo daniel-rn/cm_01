@@ -1,7 +1,7 @@
 ﻿using System.Data.Common;
 using FirebirdSql.Data.FirebirdClient;
 
-namespace CORE.Mapeadores
+namespace CORUJAMANAGER.MAPEADORES
 {
     public static class Connection
     {
@@ -24,7 +24,7 @@ namespace CORE.Mapeadores
         private static string ObtenhaConfiguracoesBanco()
         {
             var configuracoesBanco = "User=SYSDBA;Password=masterkey";
-            configuracoesBanco += ";Database = C:\\WorkNascimento\\baseDeDados\\CADASTRO.FDB";
+            configuracoesBanco += ";Database = C:\\WorkNascimento\\BASEDEDADOS\\CADASTRO";
             ////configuracoesBanco += ";Database = C:\\WorkNascimento\\BaseDeDados\\CADASTRO.FDB";
             configuracoesBanco += ";Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=0;";
             configuracoesBanco += "Connection timeout=7;Pooling=True;Packet Size=8192;Server Type=0";

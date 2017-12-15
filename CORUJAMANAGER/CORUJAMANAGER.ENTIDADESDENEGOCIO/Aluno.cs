@@ -3,6 +3,8 @@
     public class Aluno : ObjetoComId
     {
         public string DataNascimento { get; set; }
+
+        public string SenhaDeAcesso { get; set; }
         
         public override bool Equals(object obj)
         {
