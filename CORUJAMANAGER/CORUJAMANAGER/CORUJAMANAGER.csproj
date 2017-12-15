@@ -64,11 +64,23 @@
     <Compile Include="Controles\ControleDePesquisa.Designer.cs">
       <DependentUpon>ControleDePesquisa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ControleGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControleGrid.Designer.cs">
+      <DependentUpon>ControleGrid.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaixa.Designer.cs">
+      <DependentUpon>FormCaixa.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -78,8 +90,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\ControleGrid.resx">
+      <DependentUpon>ControleGrid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCaixa.resx">
+      <DependentUpon>FormCaixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
