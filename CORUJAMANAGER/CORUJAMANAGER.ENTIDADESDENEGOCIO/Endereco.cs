@@ -2,7 +2,7 @@
 
 namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
 {
-    public class Endereco : ObjetoComId
+    public class Endereco : ObjetoComId,IEndereco
     {
         public int Numero { get; set; }
         public int Quadra { get; set; }
