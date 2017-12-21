@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 using CORUJAMANAGER;
+using CORUJAMANAGER.ENTIDADESDENEGOCIO;
 
 namespace CORUJA
 {
@@ -18,6 +20,7 @@ namespace CORUJA
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+                MetodoTeste();
                 Application.Run(new FormLogin());
             }
 #if DEBUG
@@ -26,6 +29,12 @@ namespace CORUJA
                 ExecuteAplicacao(args);
             }
 #endif
+        }
+
+        private static void MetodoTeste()
+        {
+            var cidade = new Cidade("Goiania", new Estado{Nome = "Goias !"});
+            Debug.Write(cidade.ToString());
         }
 
         private static void ExecuteAplicacao(IReadOnlyList<string> args)

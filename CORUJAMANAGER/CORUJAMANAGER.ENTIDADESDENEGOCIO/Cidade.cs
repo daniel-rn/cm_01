@@ -9,19 +9,9 @@
             Estado = estado;
         }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
         public override string ToString()
         {
-            return base.ToString();
+            return $"Nome: {Nome} Estado: {Estado}";
         }
     }
 }
