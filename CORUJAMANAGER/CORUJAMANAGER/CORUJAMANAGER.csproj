@@ -159,6 +159,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="if_owl_416387.ico" />
+    <None Include="Resources\minus_32_red.png" />
+    <None Include="Resources\plus_24.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">
