@@ -20,7 +20,7 @@ namespace CORUJAMANAGER
 
             if (teste)
             {
-                Form frm = new FormBase();
+                Form frm = new FormCaixa();
                 frm.Show();
             }
         }

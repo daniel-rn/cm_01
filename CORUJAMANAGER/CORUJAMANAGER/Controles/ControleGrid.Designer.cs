@@ -28,25 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvControle = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pcbAdicionar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvControle)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAdicionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvControle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MinimumSize = new System.Drawing.Size(200, 200);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(465, 305);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvControle.AllowUserToAddRows = false;
+            this.dgvControle.AllowUserToDeleteRows = false;
+            this.dgvControle.AllowUserToResizeRows = false;
+            this.dgvControle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvControle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvControle.Location = new System.Drawing.Point(0, 0);
+            this.dgvControle.MinimumSize = new System.Drawing.Size(200, 200);
+            this.dgvControle.Name = "dgvControle";
+            this.dgvControle.Size = new System.Drawing.Size(465, 305);
+            this.dgvControle.TabIndex = 0;
             // 
             // flowLayoutPanel2
             // 
@@ -62,30 +65,33 @@
             // 
             this.pcbAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbAdicionar.Image = global::CORUJAMANAGER.Properties.Resources.plus_24;
-            this.pcbAdicionar.Location = new System.Drawing.Point(3, 3);
+            this.pcbAdicionar.Location = new System.Drawing.Point(3, 5);
+            this.pcbAdicionar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.pcbAdicionar.Name = "pcbAdicionar";
             this.pcbAdicionar.Size = new System.Drawing.Size(24, 24);
             this.pcbAdicionar.TabIndex = 0;
             this.pcbAdicionar.TabStop = false;
+            this.pcbAdicionar.Click += new System.EventHandler(this.pcbAdicionar_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CORUJAMANAGER.Properties.Resources.minus_32_red;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 35);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // ControleGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvControle);
             this.Name = "ControleGrid";
             this.Size = new System.Drawing.Size(499, 305);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvControle)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbAdicionar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -95,7 +101,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvControle;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pcbAdicionar;
         private System.Windows.Forms.PictureBox pictureBox2;
