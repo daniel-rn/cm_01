@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
-using CORUJAMANAGER;
-using CORUJAMANAGER.ENTIDADESDENEGOCIO;
 
-namespace CORUJA
+namespace CORUJAMANAGER
 {
     internal static class Program
     {
@@ -20,7 +17,6 @@ namespace CORUJA
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                MetodoTeste();
                 Application.Run(new FormLogin());
             }
 #if DEBUG
@@ -31,18 +27,12 @@ namespace CORUJA
 #endif
         }
 
-        private static void MetodoTeste()
-        {
-            var cidade = new Cidade("Goiania", new Estado{Nome = "Goias !"});
-            Debug.Write(cidade.ToString());
-        }
-
         private static void ExecuteAplicacao(IReadOnlyList<string> args)
         {
             var idFormulario = args[0];
             var ass = Assembly.GetExecutingAssembly();
 
-            if (!(ass.CreateInstance($"CORUJA.{idFormulario}") is Form frm))
+            if (!(ass.CreateInstance($"CORUJAMANAGER.{idFormulario}") is Form frm))
             {
                 MessageBox.Show($@"Formulário não encontrado: {idFormulario}", @"Erro", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

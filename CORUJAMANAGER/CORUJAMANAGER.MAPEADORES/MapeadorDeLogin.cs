@@ -9,7 +9,7 @@ namespace CORUJAMANAGER.MAPEADORES
             var dto = new DtoLogin();
             using (Connection.ObtenhaFbTransaction())
             {
-                var comando = Connection.ObtehaComando("select * from usuario");
+                var comando = Connection.ObtenhaDbComando("select * from usuario");
                 var dataReader = comando.ExecuteReader();
                 
                 while (dataReader.Read())

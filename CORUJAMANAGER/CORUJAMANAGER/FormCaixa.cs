@@ -15,6 +15,7 @@ namespace CORUJAMANAGER
         public FormCaixa()
         {
             InitializeComponent();
+           
         }
 
         private void controleGrid1_Load(object sender, EventArgs e)

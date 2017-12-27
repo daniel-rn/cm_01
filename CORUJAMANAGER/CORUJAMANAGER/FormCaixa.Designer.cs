@@ -1,4 +1,6 @@
-﻿namespace CORUJAMANAGER
+﻿using System.Windows.Forms;
+
+namespace CORUJAMANAGER
 {
     partial class FormCaixa
     {
@@ -28,12 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.controleGrid1 = new CORUJAMANAGER.Controles.ControleGrid();
+            this.controleGrid1 = new CORUJAMANAGER.Controles.ControleGrid(new BindingSource());
             this.SuspendLayout();
             // 
             // controleGrid1
             // 
-            this.controleGrid1.Location = new System.Drawing.Point(281, 156);
+            this.controleGrid1.Location = new System.Drawing.Point(130, 99);
             this.controleGrid1.Name = "controleGrid1";
             this.controleGrid1.Size = new System.Drawing.Size(499, 305);
             this.controleGrid1.TabIndex = 1;
