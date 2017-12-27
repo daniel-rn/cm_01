@@ -7,19 +7,5 @@ namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
     public class Escola : ObjetoComId
     {
         public IEndereco Endereco{ get; set; }
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }

@@ -20,16 +20,6 @@ namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
             Cidade = cidade ?? throw new ArgumentNullException(nameof(cidade));
         }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
         public override string ToString()
         {
             return $"Rua: {Nome} Quadra: {Quadra} lote: {Lote}";
