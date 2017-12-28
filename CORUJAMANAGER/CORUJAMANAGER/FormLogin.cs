@@ -27,9 +27,14 @@ namespace CORUJAMANAGER
 
         private DtoLogin ObtenhaParametros()
         {
-            var dtoLogin = new DtoLogin();
-            dtoLogin.Aluno.Nome = txtNome.Text;
-            dtoLogin.Aluno.SenhaDeAcesso = txtSenha.Text;
+            var dtoLogin = new DtoLogin
+            {
+                Aluno =
+                {
+                    Nome = txtNome.Text,
+                    SenhaDeAcesso = txtSenha.Text
+                }
+            };
 
             return dtoLogin;
         }
