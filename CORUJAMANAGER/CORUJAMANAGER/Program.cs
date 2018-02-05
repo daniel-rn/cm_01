@@ -16,6 +16,7 @@ namespace CORUJAMANAGER
             if (args.Length == 0)
             {
                 Application.EnableVisualStyles();
+                Application.SetUnhandledExceptionMode(UnhandledExceptionMode.Automatic);
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new FormLogin());
             }
