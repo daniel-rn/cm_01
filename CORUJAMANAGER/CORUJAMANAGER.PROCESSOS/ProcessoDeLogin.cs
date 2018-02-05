@@ -5,11 +5,11 @@ namespace CORUJAMANAGER.PROCESSOS
 {
     public class ProcessoDeLogin
     {
-        public bool ConsultaUsuarioLogin(DtoLogin dtoLogin)
+        public bool ConsultaUsuarioLogin(SessaoDoUsuario sessaoDoUsuario)
         {
-            var dtoComparacao = new MapeadorDeLogin().ExecutaConsultaUsuarioLogin(dtoLogin);
+            var dtoComparacao = new MapeadorDeLogin().ExecutaConsultaUsuarioLogin(sessaoDoUsuario);
 
-            return dtoComparacao.Equals(dtoLogin);
+            return dtoComparacao.Equals(sessaoDoUsuario);
         }
     }
 }

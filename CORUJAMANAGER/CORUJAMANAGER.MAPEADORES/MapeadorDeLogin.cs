@@ -4,9 +4,9 @@ namespace CORUJAMANAGER.MAPEADORES
 {
     public class MapeadorDeLogin
     {
-        public DtoLogin ExecutaConsultaUsuarioLogin(DtoLogin dtoLogin)
+        public SessaoDoUsuario ExecutaConsultaUsuarioLogin(SessaoDoUsuario sessaoUsuario)
         {
-            var dto = new DtoLogin();
+            var sessaoDoUsuario = new SessaoDoUsuario();
             using (Connection.ObtenhaFbTransaction())
             {
                 var comando = Connection.ObtenhaDbComando("select * from usuario");
@@ -14,12 +14,12 @@ namespace CORUJAMANAGER.MAPEADORES
                 
                 while (dataReader.Read())
                 {
-                    dto.Aluno.Nome = dataReader.GetString(1);
-                    dto.Aluno.SenhaDeAcesso = dataReader.GetString(3);
+                    sessaoDoUsuario.Aluno.Nome = dataReader.GetString(1);
+                    sessaoDoUsuario.Aluno.SenhaDeAcesso = dataReader.GetString(3);
                 }
             }
             
-            return dto;
+            return sessaoDoUsuario;
         }
     }
 }

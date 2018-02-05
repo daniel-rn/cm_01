@@ -15,19 +15,16 @@ namespace CORUJAMANAGER
 
         private void pbLogin_Click(object sender, EventArgs e)
         {
-            ObtenhaParametros();
-            var teste = new ProcessoDeLogin().ConsultaUsuarioLogin(ObtenhaParametros());
+            var ehLoginValido = new ProcessoDeLogin().ConsultaUsuarioLogin(ObtenhaParametros());
 
-            if (teste)
-            {
-                Form frm = new FormCaixa();
-                frm.Show();
-            }
+            if (!ehLoginValido) return;
+            Form frm = new FormCaixa();
+            frm.Show();
         }
 
-        private DtoLogin ObtenhaParametros()
+        private SessaoDoUsuario ObtenhaParametros()
         {
-            var dtoLogin = new DtoLogin
+            var sessaoDoUsuario = new SessaoDoUsuario
             {
                 Aluno =
                 {
@@ -36,7 +33,7 @@ namespace CORUJAMANAGER
                 }
             };
 
-            return dtoLogin;
+            return sessaoDoUsuario;
         }
     }
 }

@@ -2,11 +2,11 @@
 
 namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
 {
-    public class DtoLogin
+    public class SessaoDoUsuario
     {
         public Aluno Aluno { get; set; }
 
-        public DtoLogin()
+        public SessaoDoUsuario()
         {
             Aluno = new Aluno();
         }
@@ -16,7 +16,8 @@ namespace CORUJAMANAGER.ENTIDADESDENEGOCIO
             if (obj == null)
                 return false;
 
-            return ((DtoLogin)obj).Aluno.Nome == Aluno.Nome && ((DtoLogin)obj).Aluno.SenhaDeAcesso == Aluno.SenhaDeAcesso;
+            return ((SessaoDoUsuario)obj).Aluno.Nome == Aluno.Nome 
+                   && ((SessaoDoUsuario)obj).Aluno.SenhaDeAcesso == Aluno.SenhaDeAcesso;
         }
     }
 }
