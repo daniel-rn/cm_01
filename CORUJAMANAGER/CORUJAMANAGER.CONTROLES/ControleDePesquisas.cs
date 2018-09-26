@@ -14,6 +14,8 @@ namespace CORUJAMANAGER.CONTROLES
     {
         public ControleDePesquisas()
         {
+        
+        //teste de qualquer coisa
             InitializeComponent();
         }
     }
